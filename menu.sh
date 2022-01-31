@@ -27,7 +27,7 @@ echo -e "${BGBLUE}                     PREMIUM SCRIPT                      ${NC}
 echo -e  " ══════════════════════════════════════════════════════════════════" | lolcat
 figlet PakyaVPN | lolcat
 echo -e  " ══════════════════════════════════════════════════════════════════" | lolcat
-echo -e "${BGBLUE}                     MAIN MENU                      ${NC}"
+echo -e "${BGBLUE}                     MAIN MENU                           ${NC}"
 echo -e  " ══════════════════════════════════════════════════════════════════" | lolcat
 echo -e "\e[0m                                                               "
 echo -e "\e[1;31m* [1]\e[0m  \e[0;97m: SSH & OVPN PANEL\e[0m"
@@ -61,7 +61,7 @@ echo -e "\e[1;31m* [25]\e[0m \e[0;97m: Exit From VPS \e[0m"
 
 echo -e ""
 echo -e  " ══════════════════════════════════════════════════════════════════" | lolcat
-echo -e "${BGBLUE}                     PAKYAVPN                      ${NC}"
+echo -e "${BGBLUE}                     PAKYAVPN                           ${NC}"
 echo -e  " ══════════════════════════════════════════════════════════════════" | lolcat
 echo -e "\e[0m                                                               "
 echo -e ""
