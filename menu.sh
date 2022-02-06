@@ -25,7 +25,7 @@ echo -e ""
 echo -e  " ══════════════════════════════════════════════════════════════════" | lolcat
 echo -e " ${BGBLUE}                     PREMIUM SCRIPT                               ${NC}"
 echo -e  " ══════════════════════════════════════════════════════════════════" | lolcat
-figlet MrDebianVPN | lolcat
+figlet BackDoorVPN | lolcat
 echo -e  " ══════════════════════════════════════════════════════════════════" | lolcat
 echo -e " ${BGBLUE}                     MAIN MENU                                    ${NC}"
 echo -e  " ══════════════════════════════════════════════════════════════════" | lolcat
