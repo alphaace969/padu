@@ -1,8 +1,11 @@
 #!/bin/bash
 BGGREEN='\e[1;42'
 BGBLUE='\e[1;44m'
-NC='\e[0m'
-BGRED='\e[1;44m'
+ORANGE='\033[0;33m'
+PURPLE='\033[0;35m'
+CYAN='\033[0;36m'
+NC='\033[0;37m'
+BGRED='\e[1;41m'
 clear
 echo -e ""
 ISP=$(curl -s ipinfo.io/org | cut -d " " -f 2-10 )
@@ -22,13 +25,13 @@ echo -e "* City          : $CITY"
 echo -e "* IP VPS        : $IPVPS"
 echo -e "* DOMAIN        : $domain"
 echo -e ""
-echo -e  " ══════════════════════════════════════════════════════════════════" | lolcat
+echo -e " ${ORANGE}══════════════════════════════════════════════════════════════════${NC}"
 echo -e " ${BGBLUE}                     PREMIUM SCRIPT                               ${NC}"
-echo -e  " ══════════════════════════════════════════════════════════════════" | lolcat
-figlet DrugVPN | lolcat
-echo -e  " ══════════════════════════════════════════════════════════════════" | lolcat
+echo -e " ${ORANGE}══════════════════════════════════════════════════════════════════${NC}"
+figlet PakyaVPN | lolcat
+echo -e " ${ORANGE}══════════════════════════════════════════════════════════════════${NC}"
 echo -e " ${BGBLUE}                     MAIN MENU                                    ${NC}"
-echo -e  " ══════════════════════════════════════════════════════════════════" | lolcat
+echo -e " ${ORANGE}══════════════════════════════════════════════════════════════════${NC}"
 echo -e "\e[0m                                                               "
 echo -e "\e[1;31m* [1]\e[0m  \e[0;97m: SSH & OVPN PANEL\e[0m"
 echo -e "\e[1;31m* [2]\e[0m  \e[0;97m: WIREGUARD PANEL\e[0m"
@@ -39,7 +42,7 @@ echo -e "\e[1;31m* [6]\e[0m  \e[0;97m: VLESS PANEL\e[0m"
 echo -e "\e[1;31m* [7]\e[0m  \e[0;97m: XRAY PANEL\e[0m"
 echo -e "\e[1;31m* [8]\e[0m  \e[0;97m: TROJAN PANEL\e[0m"
 echo -e ""
-echo -e  " ═══════════════════════════-SYSTEM-═══════════════════════════════" | lolcat
+echo -e " ${ORANGE}═══════════════════════════-SYSTEM-═══════════════════════════════${NC}"
 echo -e "\e[0m                                                               "
 echo -e "\e[1;31m* [9]\e[0m  \e[0;97m: Add Or Change Subdomain Host For VPS\e[0m"
 echo -e "\e[1;31m* [10]\e[0m \e[0;97m: Renew Certificate \e[0m"
@@ -59,9 +62,9 @@ echo -e "\e[1;31m* [23]\e[0m \e[0;97m: Info Script Auto Install\e[0m"
 echo -e "\e[1;31m* [24]\e[0m \e[0;97m: Show System Status \e[0m"
 echo -e "\e[1;31m* [25]\e[0m \e[0;97m: Exit From VPS \e[0m"
 echo -e ""
-echo -e  " ══════════════════════════════════════════════════════════════════" | lolcat
+echo -e " ${ORANGE}══════════════════════════════════════════════════════════════════${NC}"
 echo -e " ${BGBLUE}                     PAKYAVPN                                     ${NC}"
-echo -e  " ══════════════════════════════════════════════════════════════════" | lolcat
+echo -e " ${ORANGE}══════════════════════════════════════════════════════════════════${NC}"
 echo -e "\e[0m                                                               "
 echo -e ""
 read -p "        Select From Options [1-25 or x]: " menu
