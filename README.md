@@ -1,6 +1,6 @@
 # AUTOSCRIPT BY VPN PAKYAVPN
 
- <h2 align="center">AutoScript Install VPN By Pakyavpn <img src="https://img.shields.io/badge/Version-1-blue.svg"></h2>
+ <h2 align="center">AutoScript Install VPN By Pakyavpn <img src="https://img.shields.io/badge/Version-2-blue.svg"></h2>
 
 
 <h2 align="center"> Supported Linux Distribution</h2>
@@ -16,10 +16,44 @@ src="https://img.shields.io/badge/Service-Xray-success.svg">  <img src= "https:/
 ## Installation
 
   ```html
-  sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.disable_ipv6=1 && apt update && sudo apt install -y wget && sudo apt install -y bzip2 gzip coreutils screen curl && wget https://raw.githubusercontent.com/huaweipadu/padu/main/setup.sh && chmod +x setup.sh && ./setup.sh && rm -rf ./setup.sh
+  sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.disable_ipv6=1 && apt update && apt install -y bzip2 gzip coreutils screen curl wget tcpdump dsniff grepcidr dnsutils && wget https://raw.githubusercontent.com/huaweipadu/padu/main/setup.sh && chmod +x setup.sh && ./setup.sh
 
   ```
 
 ## Credit :
 
-*   Modded Script by    t.me/anakjati567
+*   Script by    t.me/anakjati567
+```
+
+### Fix Wireguard Not Running
+```
+ ```
+systemctl stop wg-quick@wg0
+```
+```
+apt install sudo lsb-release -y
+```
+```
+echo "deb http://deb.debian.org/debian $(lsb_release -sc)-backports main" | sudo tee /etc/apt/sources.list.d/backports.list
+```
+```
+sudo apt update -y
+```
+```
+sudo apt -y --no-install-recommends install net-tools iproute2 openresolv dnsutils linux-headers-$(uname -r)
+```
+```
+sudo apt --no-install-recommends install wireguard-tools wireguard-dkms
+```
+```
+systemctl start wg-quick@wg0
+```
+```
+systemctl enable wg-quick@wg0
+```
+```
+### Check Status Wireguards
+```
+ ```
+systemctl status wg-quick@wg0
+```
