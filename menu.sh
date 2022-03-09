@@ -1,71 +1,107 @@
 #!/bin/bash
-BGGREEN='\e[1;42'
+green='\e[32m'
+RED='\033[0;31m'
+NC='\033[0m'
 BGBLUE='\e[1;44m'
 ORANGE='\033[0;33m'
+BLUE='\033[0;34m'
 PURPLE='\033[0;35m'
 CYAN='\033[0;36m'
 NC='\033[0;37m'
-BGRED='\e[1;41m'
 clear
 echo -e ""
+# DNS Patch
+tipeos2=$(uname -m)
+# OS Uptime
+uptime="$(uptime -p | cut -d " " -f 2-10)"
+# Download
+download=`grep -e "lo:" -e "wlan0:" -e "eth0" /proc/net/dev  | awk '{print $2}' | paste -sd+ - | bc`
+downloadsize=$(($download/1073741824))
+# Upload
+upload=`grep -e "lo:" -e "wlan0:" -e "eth0" /proc/net/dev | awk '{print $10}' | paste -sd+ - | bc`
+uploadsize=$(($upload/1073741824))
+# Getting CPU Information
+cpu_usage1="$(ps aux | awk 'BEGIN {sum=0} {sum+=$3}; END {print sum}')"
+cpu_usage="$((${cpu_usage1/\.*} / ${corediilik:-1}))"
+cpu_usage+=" %"
+# Shell Version
+shellversion=""
+shellversion=Bash
+shellversion+=" Version" 
+shellversion+=" ${BASH_VERSION/-*}" 
+versibash=$shellversion
+# Getting OS Information
+source /etc/os-release
+Versi_OS=$VERSION
+ver=$VERSION_ID
+Tipe=$NAME
+URL_SUPPORT=$HOME_URL
+basedong=$ID
 ISP=$(curl -s ipinfo.io/org | cut -d " " -f 2-10 )
 CITY=$(curl -s ipinfo.io/city )
 WKT=$(curl -s ipinfo.io/timezone )
 IPVPS=$(curl -s ipinfo.io/ip )
-jam=$(date +"%T")
-hari=$(date +"%A")
-tnggl=$(date +"%d-%B-%Y")
 domain=$(cat /etc/v2ray/domain)
+Sver=$(cat /home/version)
+tele=$(cat /home/contact)
+	cname=$( awk -F: '/model name/ {name=$2} END {print name}' /proc/cpuinfo )
+	cores=$( awk -F: '/model name/ {core++} END {print core}' /proc/cpuinfo )
+	freq=$( awk -F: ' /cpu MHz/ {freq=$2} END {print freq}' /proc/cpuinfo )
+	tram=$( free -m | awk 'NR==2 {print $2}' )
+	uram=$( free -m | awk 'NR==2 {print $3}' )
+	fram=$( free -m | awk 'NR==2 {print $4}' )
+	swap=$( free -m | awk 'NR==4 {print $2}' )
 clear
-echo -e "* TIME          : $jam"
-echo -e "* DAY           : $hari"
-echo -e "* DATE          : $tnggl"
-echo -e "* SERVER        : $ISP"
-echo -e "* City          : $CITY"
-echo -e "* IP VPS        : $IPVPS"
-echo -e "* DOMAIN        : $domain"
+echo -e "$green TIME                 :$CYAN $jam"$NC
+echo -e "$green DAY                  :$CYAN $hari"$NC
+echo -e "$green DATE                 :$CYAN $tnggl"$NC
+echo -e "$green Bash Ver             :$CYAN $versibash"$NC
+echo -e "$green CPU Model            :$CYAN $cname"$NC
+echo -e "$green Kernel               :$CYAN `uname -r`"$NC
+echo -e "$green Total Amount Of RAM  :$CYAN $tram MB"$NC
+echo -e "$green Used RAM             :$CYAN $uram MB"$NC
+echo -e "$green Free RAM             :$CYAN $fram MB"$NC
+echo -e "$green Used RAM             :$CYAN $uram MB"$NC
+echo -e "$green Operating System     :$CYAN "`hostnamectl | grep "Operating System" | cut -d ' ' -f5-`$NC
+echo -e "$green Download             :$CYAN $downloadsize GB ( From Startup / VPS Booting )"$NC
+echo -e "$green Upload               :$CYAN $uploadsize GB ( From Startup / VPS Booting )"$NC
+echo -e "$green ISP NAME             :$CYAN $ISP"$NC
+echo -e "$green IP VPS               :$CYAN $IPVPS"$NC
+echo -e "$green DOMAIN               :$CYAN $domain"$NC
+echo -e "$green City                 :$CYAN $CITY"$NC
+echo -e "$green SERVER               :$CYAN $ISP"$NC
+echo -e "$green Script Version       :$Sver"$NC
 echo -e ""
-echo -e " ${ORANGE}══════════════════════════════════════════════════════════════════${NC}"
-echo -e " ${BGBLUE}                     PREMIUM SCRIPT                               ${NC}"
-echo -e " ${ORANGE}══════════════════════════════════════════════════════════════════${NC}"
+echo -e "${ORANGE}════════════════════════════════════════════════════════════${NC}"
+echo -e "${BGBLUE}                     [ PREMIUM SCRIPT ]                     ${NC}"
+echo -e "${ORANGE}════════════════════════════════════════════════════════════${NC}"
 figlet PakyaVPN | lolcat
-echo -e " ${ORANGE}══════════════════════════════════════════════════════════════════${NC}"
-echo -e " ${BGBLUE}                     MAIN MENU                                    ${NC}"
-echo -e " ${ORANGE}══════════════════════════════════════════════════════════════════${NC}"
-echo -e "\e[0m                                                               "
-echo -e "\e[1;31m* [1]\e[0m  \e[0;97m: SSH & OVPN PANEL\e[0m"
-echo -e "\e[1;31m* [2]\e[0m  \e[0;97m: WIREGUARD PANEL\e[0m"
-echo -e "\e[1;31m* [3]\e[0m  \e[0;97m: SSR PANEL\e[0m"
-echo -e "\e[1;31m* [4]\e[0m  \e[0;97m: SHADOWSOCKS PANEL\e[0m"
-echo -e "\e[1;31m* [5]\e[0m  \e[0;97m: VMESS PANEL\e[0m"
-echo -e "\e[1;31m* [6]\e[0m  \e[0;97m: VLESS PANEL\e[0m"
-echo -e "\e[1;31m* [7]\e[0m  \e[0;97m: XRAY PANEL\e[0m"
-echo -e "\e[1;31m* [8]\e[0m  \e[0;97m: TROJAN PANEL\e[0m"
-echo -e ""
-echo -e " ${ORANGE}═══════════════════════════-SYSTEM-═══════════════════════════════${NC}"
-echo -e "\e[0m                                                               "
-echo -e "\e[1;31m* [9]\e[0m  \e[0;97m: Add Or Change Subdomain Host For VPS\e[0m"
-echo -e "\e[1;31m* [10]\e[0m \e[0;97m: Renew Certificate \e[0m"
-echo -e "\e[1;31m* [11]\e[0m \e[0;97m: Change Port Of Some Service\e[0m"
-echo -e "\e[1;31m* [12]\e[0m \e[0;97m: Autobackup Data VPS\e[0m"
-echo -e "\e[1;31m* [13]\e[0m \e[0;97m: Backup Data VPS\e[0m"
-echo -e "\e[1;31m* [14]\e[0m \e[0;97m: Restore Data VPS\e[0m"
-echo -e "\e[1;31m* [15]\e[0m \e[0;97m: Webmin Menu\e[0m"
-echo -e "\e[1;31m* [16]\e[0m \e[0;97m: Update To Latest Kernel\e[0m"
-echo -e "\e[1;31m* [17]\e[0m \e[0;97m: Limit Bandwith Speed Server\e[0m"
-echo -e "\e[1;31m* [18]\e[0m \e[0;97m: Check Usage of VPS Ram\e[0m"
-echo -e "\e[1;31m* [19]\e[0m \e[0;97m: Reboot VPS\e[0m"
-echo -e "\e[1;31m* [20]\e[0m \e[0;97m: Speedtest VPS\e[0m"
-echo -e "\e[1;31m* [21]\e[0m \e[0;97m: Update To Latest Script Version\e[0m"
-echo -e "\e[1;31m* [22]\e[0m \e[0;97m: Displaying System Information\e[0m"
-echo -e "\e[1;31m* [23]\e[0m \e[0;97m: Info Script Auto Install\e[0m"
-echo -e "\e[1;31m* [24]\e[0m \e[0;97m: Show System Status \e[0m"
-echo -e "\e[1;31m* [25]\e[0m \e[0;97m: Exit From VPS \e[0m"
-echo -e ""
-echo -e " ${ORANGE}══════════════════════════════════════════════════════════════════${NC}"
-echo -e " ${BGBLUE}                     PAKYAVPN                                     ${NC}"
-echo -e " ${ORANGE}══════════════════════════════════════════════════════════════════${NC}"
-echo -e "\e[0m                                                               "
+echo -e "${ORANGE}════════════════════════════════════════════════════════════${NC}"
+echo -e "${BGBLUE}                     [ MAIN MENU ]                          ${NC}"
+echo -e "${ORANGE}════════════════════════════════════════════════════════════${NC}"
+echo -e "$green (•1) $NC PANEL SSH & OPENVPN"
+echo -e "$green (•2) $NC PANEL WIREGUARDS"
+echo -e "$green (•3) $NC PANEL SSR "
+echo -e "$green (•4) $NC PANEL SS "
+echo -e "$green (•5) $NC PANEL VMESS "
+echo -e "$green (•6) $NC PANEL VLESS "
+echo -e "$green (•7) $NC PANEL XRAY "
+echo -e "$green (•8) $NC PANEL TROJAN "
+echo -e "${ORANGE}════════════════════════════════════════════════════════════${NC}"
+echo -e "${BGBLUE}                     [ SISTEM MENU ]                        ${NC}"
+echo -e "${ORANGE}════════════════════════════════════════════════════════════${NC}"
+echo -e "$green (•9) $NC ADD NEW SUBDOMAIN     $green (17) $NC Limit Bandwith "
+echo -e "$green (10) $NC RENEW CERTIFICATE     $green (18) $NC Check Usage "
+echo -e "$green (11) $NC CHANGE PORT           $green (19) $NC Reboot VPS "
+echo -e "$green (12) $NC AUTOBACKUP DATA       $green (20) $NC Speedtest VPS "
+echo -e "$green (13) $NC BACKUP DATA VPS       $green (21) $NC Update Script "
+echo -e "$green (14) $NC Restore Data Vps      $green (22) $NC Displaying System "
+echo -e "$green (15) $NC WEBMIN MENU           $green (23) $NC Info Script Auto "
+echo -e "$green (16) $NC UPDATE TO KERNEL      $green (24) $NC Show System Status "
+echo -e "${ORANGE}════════════════════════════════════════════════════════════${NC}"
+echo -e "$green Premium VPS by @anakjati567"$NC
+echo -e "$green Thank you for using script by PAKYAVPN"$NC
+echo -e "${ORANGE}════════════════════════════════════════════════════════════${NC}"
 echo -e ""
 read -p "        Select From Options [1-25 or x]: " menu
 echo -e ""
