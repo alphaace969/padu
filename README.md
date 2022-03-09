@@ -1,6 +1,6 @@
 # AUTOSCRIPT BY VPN PAKYAVPN
 
- <h2 align="center">AutoScript Install VPN By Pakyavpn <img src="https://img.shields.io/badge/Version-1-blue.svg"></h2>
+ <h2 align="center">AutoScript Install VPN By Pakyavpn <img src="https://img.shields.io/badge/Version-2-blue.svg"></h2>
 
 
 <h2 align="center"> Supported Linux Distribution</h2>
