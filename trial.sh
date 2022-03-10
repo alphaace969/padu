@@ -20,8 +20,8 @@ echo Setting Password: $Pass
 sleep 0.5
 clear
 useradd -e `date -d "$masaaktif days" +"%Y-%m-%d"` -s /bin/false -M $Login
-hariini="$(chage -l $Login | grep "Account create" | awk -F": " '{print $2}')"
-exp="$(chage -l $Login | grep "Account expires" | awk -F": " '{print $2}')"
+hariini=`date -d "0 days" +"%d-%m-%Y"`
+exp=`date -d "$masaaktif days" +"%d-%m-%Y"`
 echo -e "$Pass\n$Pass\n"|passwd $Login &> /dev/null
 echo -e ""
 echo -e "Informasi Trial SSH & OpenVPN"
