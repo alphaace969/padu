@@ -1,5 +1,5 @@
 #!/bin/bash
-Yellow='\e[0;33m'
+Lyellow='\e[1;93m'
 green='\e[32m'
 RED='\033[0;31m'
 NC='\033[0m'
@@ -75,7 +75,6 @@ echo -e "$green DOMAIN               :$CYAN $domain"$NC
 echo -e "$green City                 :$CYAN $CITY"$NC
 echo -e "$green SERVER               :$CYAN $ISP"$NC
 echo -e "$green Script Version       :$Sver"$NC
-echo -e ""
 echo -e "${green}════════════════════════════════════════════════════════════${NC}"
 echo -e "${BGBLUE}                     [ PREMIUM SCRIPT ]                     ${NC}"
 echo -e "${green}════════════════════════════════════════════════════════════${NC}"
@@ -94,17 +93,17 @@ echo -e "$PURPLE (•8) $NC PANEL TROJAN "
 echo -e "${green}════════════════════════════════════════════════════════════${NC}"
 echo -e "${BGBLUE}                     [ SISTEM MENU ]                        ${NC}"
 echo -e "${green}════════════════════════════════════════════════════════════${NC}"
-echo -e "$PURPLE (•9) $NC ADD NEW SUBDOMAIN     $green (17) $NC Limit Bandwith "
-echo -e "$PURPLE (10) $NC RENEW CERTIFICATE     $green (18) $NC Check Usage "
-echo -e "$PURPLE (11) $NC CHANGE PORT           $green (19) $NC Reboot VPS "
-echo -e "$PURPLE (12) $NC AUTOBACKUP DATA       $green (20) $NC Speedtest VPS "
-echo -e "$PURPLE (13) $NC BACKUP DATA VPS       $green (21) $NC Update Script "
-echo -e "$PURPLE (14) $NC Restore Data Vps      $green (22) $NC Displaying System "
-echo -e "$PURPLE (15) $NC WEBMIN MENU           $green (23) $NC Info Script Auto "
-echo -e "$PURPLE (16) $NC UPDATE TO KERNEL      $green (24) $NC Show System Status "
+echo -e "$PURPLE (•9) $NC ADD NEW SUBDOMAIN     $PURPLE (17) $NC Limit Bandwith "
+echo -e "$PURPLE (10) $NC RENEW CERTIFICATE     $PURPLE (18) $NC Check Usage "
+echo -e "$PURPLE (11) $NC CHANGE PORT           $PURPLE (19) $NC Reboot VPS "
+echo -e "$PURPLE (12) $NC AUTOBACKUP DATA       $PURPLE (20) $NC Speedtest VPS "
+echo -e "$PURPLE (13) $NC BACKUP DATA VPS       $PURPLE (21) $NC Update Script "
+echo -e "$PURPLE (14) $NC Restore Data Vps      $PURPLE (22) $NC Displaying System "
+echo -e "$PURPLE (15) $NC WEBMIN MENU           $PURPLE (23) $NC Info Script Auto "
+echo -e "$PURPLE (16) $NC UPDATE TO KERNEL      $PURPLE (24) $NC Show System Status "
 echo -e "${green}════════════════════════════════════════════════════════════${NC}"
-echo -e "$Yellow Premium VPS by @MrDebian"$NC
-echo -e "$Yellow Thank you for using script by PAKYAVPN"$NC
+echo -e "$Lyellow Premium VPS by @MrDebian"$NC
+echo -e "$Lyellow Thank you for using script by PAKYAVPN"$NC
 echo -e "${green}════════════════════════════════════════════════════════════${NC}"
 echo -e ""
 read -p "        Select From Options [1-25 or x]: " menu
