@@ -71,8 +71,6 @@ echo -e "$green IP VPS               :$CYAN $IPVPS"$NC
 echo -e "$green DOMAIN               :$CYAN $domain"$NC
 echo -e "$green City                 :$CYAN $CITY"$NC
 echo -e "$green SERVER               :$CYAN $ISP"$NC
-echo -e "$green Client Name          :$CYAN $name${NC}"
-echo -e "$green Expired Date         :$CYAN $exp${NC}"
 echo -e "$green Script Version       :$CYAN $Sver"
 echo -e "${green}════════════════════════════════════════════════════════════${NC}"
 echo -e "${BGBLUE}                     [ PREMIUM SCRIPT ]                     ${NC}"
@@ -105,7 +103,9 @@ echo -e "$Lyellow Premium VPS by @anakjati567"$NC
 echo -e "$Lyellow Thank you for using script by PAKYAVPN"$NC
 echo -e "${green}════════════════════════════════════════════════════════════${NC}"
 echo -e ""
-read -p "        Select From Options [1-25 or x]: " menu
+echo -e "       [Ctrl + C] For exit from main menu"
+echo -e ""
+read -p "        Select From Options [1-24 or x]: " menu
 echo -e ""
 case $menu in
 1)
