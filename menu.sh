@@ -78,7 +78,7 @@ echo -e ""
 echo -e "${ORANGE}════════════════════════════════════════════════════════════${NC}"
 echo -e "${BGBLUE}                     [ PREMIUM SCRIPT ]                     ${NC}"
 echo -e "${ORANGE}════════════════════════════════════════════════════════════${NC}"
-figlet PakyaVPN | lolcat
+figlet MrdebianVPN | lolcat
 echo -e "${ORANGE}════════════════════════════════════════════════════════════${NC}"
 echo -e "${BGBLUE}                     [ MAIN MENU ]                          ${NC}"
 echo -e "${ORANGE}════════════════════════════════════════════════════════════${NC}"
@@ -102,7 +102,7 @@ echo -e "$green (14) $NC Restore Data Vps      $green (22) $NC Displaying System
 echo -e "$green (15) $NC WEBMIN MENU           $green (23) $NC Info Script Auto "
 echo -e "$green (16) $NC UPDATE TO KERNEL      $green (24) $NC Show System Status "
 echo -e "${ORANGE}════════════════════════════════════════════════════════════${NC}"
-echo -e "$green Premium VPS by @anakjati567"$NC
+echo -e "$green Premium VPS by @MrDebian"$NC
 echo -e "$green Thank you for using script by PAKYAVPN"$NC
 echo -e "${ORANGE}════════════════════════════════════════════════════════════${NC}"
 echo -e ""
