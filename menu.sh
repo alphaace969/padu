@@ -1,5 +1,8 @@
 #!/bin/bash
-Lyellow='\e[1;93m'
+Lred='\e[1;91m'
+Lgreen='\e[92m'
+Lyellow='\e[93m'
+white='\e[1;37m'
 green='\e[32m'
 RED='\033[0;31m'
 NC='\033[0m'
@@ -72,9 +75,9 @@ echo -e "$green DOMAIN               :$CYAN $domain"$NC
 echo -e "$green City                 :$CYAN $CITY"$NC
 echo -e "$green SERVER               :$CYAN $ISP"$NC
 echo -e "$green Script Version       :$CYAN $Sver"
-echo -e "${green}════════════════════════════════════════════════════════════${NC}"
+echo -e "${Lred}════════════════════════════════════════════════════════════${NC}"
 echo -e "${BGBLUE}                     [ PREMIUM SCRIPT ]                     ${NC}"
-echo -e "${green}════════════════════════════════════════════════════════════${NC}"
+echo -e "${Lred}════════════════════════════════════════════════════════════${NC}"
 echo -e ""
 echo -e "$PURPLE´´´´´´´¶¶¶¶´´´´´´´´´´´´´´´´´´ $NC"
 echo -e "$PURPLE´´´´´´¶¶´´´´¶¶¶¶¶´´¶¶¶¶´¶¶¶¶´´ $NC"
@@ -99,20 +102,20 @@ echo -e "$PURPLE´´¶´´´´´´´´¶¶¶¶¶¶¶¶´´´´´´´´¶´´ $NC
 echo -e "$PURPLE´´¶¶´´´´´´´¶¶´´´´¶¶´´´´´´¶¶´´´ $NC"
 echo -e "$PURPLE´´´´¶¶¶¶¶¶¶´´´´´´´´¶¶¶¶¶¶´´´´´ $NC"
 echo -e "$green Premium Script$NC"
-echo -e "${green}════════════════════════════════════════════════════════════${NC}"
+echo -e "${Lred}════════════════════════════════════════════════════════════${NC}"
 echo -e "${BGBLUE}                     [ MAIN MENU ]                          ${NC}"
-echo -e "${green}════════════════════════════════════════════════════════════${NC}"
-echo -e "$PURPLE (•1) $NC PANEL SSH & OPENVPN"
-echo -e "$PURPLE (•2) $NC PANEL WIREGUARDS"
-echo -e "$PURPLE (•3) $NC PANEL SSR "
-echo -e "$PURPLE (•4) $NC PANEL SS "
-echo -e "$PURPLE (•5) $NC PANEL VMESS "
-echo -e "$PURPLE (•6) $NC PANEL VLESS "
-echo -e "$PURPLE (•7) $NC PANEL XRAY "
-echo -e "$PURPLE (•8) $NC PANEL TROJAN "
-echo -e "${green}════════════════════════════════════════════════════════════${NC}"
+echo -e "${Lred}════════════════════════════════════════════════════════════${NC}"
+echo -e "$PURPLE (•1) $NC $green PANEL SSH & OPENVPN"$NC
+echo -e "$PURPLE (•2) $NC $green PANEL WIREGUARDS"$NC
+echo -e "$PURPLE (•3) $NC $green PANEL SSR"$NC
+echo -e "$PURPLE (•4) $NC $green PANEL SS"$NC
+echo -e "$PURPLE (•5) $NC $green PANEL VMESS"$NC
+echo -e "$PURPLE (•6) $NC $green PANEL VLESS"$NC
+echo -e "$PURPLE (•7) $NC $green PANEL XRAY"$NC
+echo -e "$PURPLE (•8) $NC $green PANEL TROJAN"$NC
+echo -e "${Lred}════════════════════════════════════════════════════════════${NC}"
 echo -e "${BGBLUE}                     [ SISTEM MENU ]                        ${NC}"
-echo -e "${green}════════════════════════════════════════════════════════════${NC}"
+echo -e "${Lred}════════════════════════════════════════════════════════════${NC}"
 echo -e "$PURPLE (•9) $NC ADD NEW SUBDOMAIN     $PURPLE (17) $NC Limit Bandwith "
 echo -e "$PURPLE (10) $NC RENEW CERTIFICATE     $PURPLE (18) $NC Check Usage "
 echo -e "$PURPLE (11) $NC CHANGE PORT           $PURPLE (19) $NC Reboot VPS "
@@ -121,10 +124,10 @@ echo -e "$PURPLE (13) $NC BACKUP DATA VPS       $PURPLE (21) $NC Update Script "
 echo -e "$PURPLE (14) $NC Restore Data Vps      $PURPLE (22) $NC Displaying System "
 echo -e "$PURPLE (15) $NC WEBMIN MENU           $PURPLE (23) $NC Info Script Auto "
 echo -e "$PURPLE (16) $NC UPDATE TO KERNEL      $PURPLE (24) $NC Show System Status "
-echo -e "${green}════════════════════════════════════════════════════════════${NC}"
+echo -e "${Lred}════════════════════════════════════════════════════════════${NC}"
 echo -e "$Lyellow Premium VPS by @GTMVPN"$NC
 echo -e "$Lyellow Thank you for using script by PAKYAVPN"$NC
-echo -e "${green}════════════════════════════════════════════════════════════${NC}"
+echo -e "${Lred}════════════════════════════════════════════════════════════${NC}"
 echo -e ""
 echo -e "       [Ctrl + C] For exit from main menu"
 echo -e ""
