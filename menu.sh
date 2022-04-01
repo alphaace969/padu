@@ -12,7 +12,7 @@ NC='\033[0;37m'
 MYIP=$(wget -qO- ipinfo.io/ip);
 IZIN=$( curl https://raw.githubusercontent.com/huaweipadu/ip/main/access | grep $MYIP )
 if [ $MYIP = $IZIN ]; then
-clear
+clear
 # DNS Patch
 tipeos2=$(uname -m)
 # OS Uptime
