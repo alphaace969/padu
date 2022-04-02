@@ -1,4 +1,5 @@
 #!/bin/bash
+clear
 Lyellow='\e[1;93m'
 green='\e[32m'
 RED='\033[0;31m'
@@ -9,11 +10,16 @@ BLUE='\033[0;34m'
 PURPLE='\033[0;35m'
 CYAN='\033[0;36m'
 NC='\033[0;37m'
-MYIP=$(wget -qO- ifconfig.co);
+MYIP=$(wget -qO- ipinfo.io/ip);
 IZIN=$( curl https://raw.githubusercontent.com/huaweipadu/ip/main/access | grep $MYIP )
-sleep 3
-#EDIT IZIN
-clear
+if [ $MYIP = $IZIN ]; then
+    echo -e ""
+    clear
+else
+  echo -e ""
+    echo -e "${green}ACCESS DENIED...PM TELEGRAM @anakjati567${NC}"
+    exit 1
+fi
 # DNS Patch
 tipeos2=$(uname -m)
 # OS Uptime
@@ -82,14 +88,14 @@ figlet PAKYAVPN | lolcat
 echo -e "${green}════════════════════════════════════════════════════════════${NC}"
 echo -e "${BGBLUE}                     [ MAIN MENU ]                          ${NC}"
 echo -e "${green}════════════════════════════════════════════════════════════${NC}"
-echo -e "$PURPLE (•1) $NC $green PANEL SSH & OPENVPN"$NC
-echo -e "$PURPLE (•2) $NC $green PANEL WIREGUARDS"$NC
-echo -e "$PURPLE (•3) $NC $green PANEL SSR"$NC
-echo -e "$PURPLE (•4) $NC $green PANEL SS"$NC
-echo -e "$PURPLE (•5) $NC $green PANEL VMESS"$NC
-echo -e "$PURPLE (•6) $NC $green PANEL VLESS"$NC
-echo -e "$PURPLE (•7) $NC $green PANEL XRAY"$NC
-echo -e "$PURPLE (•8) $NC $green PANEL TROJAN"$NC
+echo -e "$PURPLE (•1) $NC PANEL SSH & OPENVPN"
+echo -e "$PURPLE (•2) $NC PANEL WIREGUARDS"
+echo -e "$PURPLE (•3) $NC PANEL SSR "
+echo -e "$PURPLE (•4) $NC PANEL SS "
+echo -e "$PURPLE (•5) $NC PANEL VMESS "
+echo -e "$PURPLE (•6) $NC PANEL VLESS "
+echo -e "$PURPLE (•7) $NC PANEL XRAY "
+echo -e "$PURPLE (•8) $NC PANEL TROJAN "
 echo -e "${green}════════════════════════════════════════════════════════════${NC}"
 echo -e "${BGBLUE}                     [ SISTEM MENU ]                        ${NC}"
 echo -e "${green}════════════════════════════════════════════════════════════${NC}"
