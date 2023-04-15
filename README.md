@@ -1,6 +1,6 @@
-# AUTOSCRIPT BY VPN PAKYAVPN
+# AUTOSCRIPT BY VPN ACEVPN
 
- <h2 align="center">AutoScript Install VPN By Pakyavpn <img src="https://img.shields.io/badge/Version-2-blue.svg"></h2>
+ <h2 align="center">AutoScript Install VPN By Acepn <img src="https://img.shields.io/badge/Version-2-blue.svg"></h2>
 
 
 <h2 align="center"> Supported Linux Distribution</h2>
@@ -16,13 +16,13 @@ src="https://img.shields.io/badge/Service-Xray-success.svg">  <img src= "https:/
 ## Installation
 
   ```html
-  sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.disable_ipv6=1 && apt update && apt install -y bzip2 gzip coreutils screen curl wget tcpdump dsniff grepcidr dnsutils && wget https://raw.githubusercontent.com/huaweipadu/padu/main/setup.sh && chmod +x setup.sh && ./setup.sh
+  sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.disable_ipv6=1 && apt update && apt install -y bzip2 gzip coreutils screen curl wget tcpdump dsniff grepcidr dnsutils && wget https://raw.githubusercontent.com/alphaace969/padu/main/setup.sh && chmod +x setup.sh && ./setup.sh
 
   ```
 
 ## Credit :
 
-*   Script by    t.me/anakjati567
+*   Script by    AceVPN
 ```
 
 ### Fix Wireguard Not Running
